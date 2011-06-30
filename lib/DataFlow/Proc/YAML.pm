@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: A YAML converting processor
 
-our $VERSION = '1.111750'; # VERSION
+our $VERSION = '1.111810'; # VERSION
 
 use Moose;
 extends 'DataFlow::Proc::Converter';
@@ -13,27 +13,21 @@ extends 'DataFlow::Proc::Converter';
 use namespace::autoclean;
 use YAML::Any;
 
-has '+policy' => (
-    'default' => sub {
-        return shift->direction eq 'CONVERT_TO' ? 'ArrayRef' : 'Scalar';
-    },
-);
+sub _policy {
+    return shift->direction eq 'CONVERT_TO' ? 'ArrayRef' : 'Scalar';
+}
 
-has '+converter_subs' => (
-    'lazy'    => 1,
-    'default' => sub {
-        my $self = shift;
-        return {
-            'CONVERT_TO' => sub {
-                return Dump($_);
-            },
-            'CONVERT_FROM' => sub {
-                return Load($_);
-            },
-        };
-    },
-    'init_arg' => undef,
-);
+sub _build_subs {
+    my $self = shift;
+    return {
+        'CONVERT_TO' => sub {
+            return Dump($_);
+        },
+        'CONVERT_FROM' => sub {
+            return Load($_);
+        },
+    };
+}
 
 __PACKAGE__->meta->make_immutable;
 
@@ -51,7 +45,7 @@ DataFlow::Proc::YAML - A YAML converting processor
 
 =head1 VERSION
 
-version 1.111750
+version 1.111810
 
 =for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders
 

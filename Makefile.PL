@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
     'YAML::Any' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '1.111750',
+  'VERSION' => '1.111810',
   'test' => {
     'TESTS' => 't/*.t'
   }

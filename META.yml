@@ -26,4 +26,4 @@ requires:
 resources:
   homepage: http://github.com/russoz/DataFlow-Proc-YAML
   repository: http://github.com/russoz/DataFlow-Proc-YAML
-version: 1.111750
+version: 1.111810

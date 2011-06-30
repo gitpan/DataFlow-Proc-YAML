@@ -1,6 +1,14 @@
 Revision History for DataFlow-Proc-YAML
 =======================================
 
+1.111810
+--------
+
+commit 16a65c850b220250e36a9b25f8b9fd8eacb87540
+Author: Alexei Znamensky <russoz@cpan.org>
+
+    using Moose "builder" rather than "default" (almost everywhere)
+
 ===================================
 End of changes in the last 365 days
 ===================================
