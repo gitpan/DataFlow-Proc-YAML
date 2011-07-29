@@ -2,7 +2,7 @@ NAME
     DataFlow::Proc::YAML - A YAML converting processor
 
 VERSION
-    version 1.111810
+    version 1.112100
 
 SUPPORT
   Perldoc
@@ -91,9 +91,9 @@ SUPPORT
     contribute patches, please send me a diff or prod me to pull from your
     repository :)
 
-    <http://github.com/russoz/DataFlow-Proc-YAML>
+    <https://github.com/russoz/DataFlow-Proc-YAML>
 
-      git clone http://github.com/russoz/DataFlow-Proc-YAML
+      git clone https://github.com/russoz/DataFlow-Proc-YAML
 
 AUTHOR
     Alexei Znamensky <russoz@cpan.org>

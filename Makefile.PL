@@ -27,12 +27,13 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'DataFlow::Proc::YAML',
   'PREREQ_PM' => {
+    'DataFlow' => '1.112100',
     'DataFlow::Proc::Converter' => '0',
     'Moose' => '0',
     'YAML::Any' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '1.111810',
+  'VERSION' => '1.112100',
   'test' => {
     'TESTS' => 't/*.t'
   }
